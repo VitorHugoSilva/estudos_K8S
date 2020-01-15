@@ -6,8 +6,17 @@ data:
   nginx.conf: |
     server {
       listen 80;
-      index index.php index.html;
+      index index.html;
       root /usr/share/nginx/html;
-
-      rewrite ^/google$ http://google.com permanent;
     }
+  index.html: |
+    <!DOCTYPE html>
+      <html lang="pt-br">
+        <head>
+          <meta charset="utf-8">
+          <title> Code.education Rocks.</title>
+        </head>
+        <body>
+          <h1> Code.education Rocks.</h1>
+        </body>
+      </html>
