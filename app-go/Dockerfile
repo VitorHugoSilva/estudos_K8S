@@ -7,11 +7,8 @@ COPY ./src/app/ .
 RUN go get -d -v ./...
 RUN go install -v ./...
 
+FROM alpine
 
-FROM scratch
-
-WORKDIR /go/bin/
-
-COPY --from=builder /go/bin/app .
+COPY --from=builder /go/bin/app /go/bin/app
 
 CMD [ "/go/bin/app" ]
