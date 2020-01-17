@@ -2,9 +2,9 @@ steps:
   - id: "Executando Instalação"
     name: 'gcr.io/cloud-builders/go:alpine'
     args: ['install', 'app']
-    env: ['GOPATH=.']
+    env: ['GOPATH=./app-go']
 
   - id: "Executando testes"
     name: 'gcr.io/cloud-builders/go:alpine'
     args: ['test', 'app']
-    env: ['GOPATH=.']
+    env: ['GOPATH=./app-go']
