@@ -9,4 +9,4 @@
 docker run -p 8000:8000 vhsilva/app-web-go
 ```
 #### Passo 2
-Acesse http://localhost:800
+Acesse http://localhost:8000
